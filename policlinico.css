@@ -1,0 +1,210 @@
+/* =============================== */
+/*      CONFIGURACIÓN GENERAL */
+/* =============================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f7f5;
+}
+
+
+/* ============== */
+/*     LOGIN */
+/* ============== */
+
+#loginContainer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.login-card{
+    width:400px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0px 0px 15px rgba(0,0,0,0.1);
+}
+
+.login-card h1{
+    text-align:center;
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.login-card p{
+    text-align:center;
+    margin-bottom:20px;
+    color:#666;
+}
+
+
+/* ================ */
+/*      INPUTS */
+/* ================ */
+
+input{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+
+/* ================ */
+/*      BOTONES */
+/* ================ */
+
+button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border:none;
+    border-radius:8px;
+    background:#4caf50;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#2e7d32;
+}
+
+
+/* ================= */
+/*   ENCABEZADOS */
+/* ================= */
+
+header{
+    background:#4caf50;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header button{
+    width:auto;
+    padding:10px 15px;
+    margin:0;
+}
+
+
+/* ================== */
+/*     TITULOS */
+/* ================== */
+
+.titulo-panel{
+    margin:20px;
+    color:#2e7d32;
+}
+
+
+/* ================== */
+/*      CARDS */
+/* ================== */
+
+.contenedor-cards{
+    display:flex;
+    gap:20px;
+    padding:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:250px;
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h4{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+}
+
+
+/* ==================== */
+/*     FORMULARIOS */
+/* ==================== */
+
+.formulario{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.formulario h3{
+    margin-bottom:15px;
+    color:#2e7d32;
+}
+
+
+/* =============== */
+/*    TABLAS */
+/* =============== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th{
+    background:#4caf50;
+    color:white;
+}
+
+th,
+td{
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:left;
+}
+
+tr:nth-child(even){
+    background:#f9f9f9;
+}
+
+
+/* ================ */
+/*    MENSAJES */
+/* ================*/
+
+#mensajeError{
+    color:red;
+    margin-top:10px;
+    text-align:center;
+}
+
+
+/* =================*/
+/*    UTILIDADES */
+/* ================= */
+
+.oculto{
+    display:none;
+}
