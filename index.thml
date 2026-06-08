@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoliClinico ULEAM</title>
+
+    <link rel="stylesheet" href="policlinico.css">
+</head>
+
+<body>
+
+    <!-- ================= -->
+    <!-- LOGIN -->
+    <!-- ================= -->
+
+    <section id="loginContainer">
+
+        <div class="login-card">
+
+            <h1>PoliClinico ULEAM</h1>
+
+            <p>Sistema de Gestión Clínica</p>
+
+            <input
+                type="text"
+                id="usuario"
+                placeholder="Ingrese usuario">
+
+            <input
+                type="password"
+                id="clave"
+                placeholder="Ingrese contraseña">
+
+            <button onclick="iniciarSesion()">
+                Ingresar
+            </button>
+
+            <p id="mensajeError"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ====================== -->
+    <!--     RECEPCIONISTA -->
+    <!-- ====================== -->
+
+    <section id="recepcionistaPanel" class="oculto">
+
+        <header>
+
+            <h2>
+                Hola Catherine 👋
+            </h2>
+
+            <button onclick="cerrarSesion()">
+                Cerrar Sesión
+            </button>
+
+        </header>
+
+        <h3 class="titulo-panel">
+            ¿Qué vamos a hacer hoy?
+        </h3>
+
+        <div class="contenedor-cards">
+
+            <div
+                class="card"
+                onclick="mostrarFormularioPaciente()">
+
+                <h4>Registrar Paciente</h4>
+
+                <p>
+                    Ingresar un nuevo paciente.
+                </p>
+
+            </div>
+
+            <div
+                class="card"
+                onclick="mostrarPacientes()">
+
+                <h4>Ver Pacientes</h4>
+
+                <p>
+                    Consultar pacientes registrados.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FORMULARIO PACIENTE -->
+
+        <div
+            id="formPaciente"
+            class="oculto formulario">
+
+            <h3>
+                Registrar Paciente
+            </h3>
+
+            <input
+                type="text"
+                id="nombrePaciente"
+                placeholder="Nombre completo">
+
+            <input
+                type="text"
+                id="cedulaPaciente"
+                placeholder="Cédula">
+
+            <input
+                type="text"
+                id="telefonoPaciente"
+                placeholder="Teléfono">
+
+            <button onclick="guardarPaciente()">
+                Guardar Paciente
+            </button>
+
+        </div>
+
+
+        <!-- TABLA PACIENTES -->
+
+        <div
+            id="listaPacientes"
+            class="oculto formulario">
+
+            <h3>
+                Pacientes Registrados
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+
+                        <th>Cédula</th>
+
+                        <th>Teléfono</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaPacientes">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============= -->
+    <!--    MÉDICO -->
+    <!-- ============= -->
+
+    <section id="medicoPanel" class="oculto">
+
+        <header>
+
+            <h2>
+                Hola Eduardo 👨‍⚕️
+            </h2>
+
+            <button onclick="cerrarSesion()">
+                Cerrar Sesión
+            </button>
+
+        </header>
+
+        <h3 class="titulo-panel">
+            ¿Qué paciente vamos a atender hoy?
+        </h3>
+
+        <div class="contenedor-cards">
+
+            <div
+                class="card"
+                onclick="mostrarPacientesMedico()">
+
+                <h4>Ver Pacientes</h4>
+
+                <p>
+                    Consultar pacientes registrados.
+                </p>
+
+            </div>
+
+            <div
+                class="card"
+                onclick="mostrarDiagnostico()">
+
+                <h4>Registrar Diagnóstico</h4>
+
+                <p>
+                    Registrar consulta médica.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLA PACIENTES MÉDICO -->
+
+        <div
+            id="pacientesMedico"
+            class="oculto formulario">
+
+            <h3>
+                Pacientes Registrados
+            </h3>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nombre</th>
+
+                        <th>Cédula</th>
+
+                        <th>Teléfono</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="tablaPacientesMedico">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- FORMULARIO DIAGNÓSTICO -->
+
+        <div
+            id="formDiagnostico"
+            class="oculto formulario">
+
+            <h3>
+                Registrar Diagnóstico
+            </h3>
+
+            <input
+                type="text"
+                id="pacienteDiagnostico"
+                placeholder="Nombre del paciente">
+
+            <input
+                type="text"
+                id="diagnostico"
+                placeholder="Diagnóstico">
+
+            <input
+                type="text"
+                id="tratamiento"
+                placeholder="Tratamiento">
+
+            <button onclick="guardarDiagnostico()">
+
+                Guardar Diagnóstico
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============== -->
+    <!--   PACIENTE -->
+    <!-- ============== -->
+
+    <section
+        id="pacientePanel"
+        class="oculto">
+
+    </section>
+
+    <script src="policlinico.js"></script>
+
+</body>
+
+</html>
